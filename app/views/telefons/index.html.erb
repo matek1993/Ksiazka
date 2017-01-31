@@ -1,0 +1,27 @@
+<h1>Listing telefons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Numer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @telefons.each do |telefon| %>
+      <tr>
+        <td><%= telefon.ID %></td>
+        <td><%= telefon.numer %></td>
+        <td><%= link_to 'Show', telefon %></td>
+        <td><%= link_to 'Edit', edit_telefon_path(telefon) %></td>
+        <td><%= link_to 'Destroy', telefon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Telefon', new_telefon_path %>

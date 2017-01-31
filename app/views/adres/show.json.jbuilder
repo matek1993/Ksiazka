@@ -1,0 +1,1 @@
+json.partial! "adres/adre", adre: @adre

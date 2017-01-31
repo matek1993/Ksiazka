@@ -1,0 +1,29 @@
+<h1>Listing adres</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Miejscowosc1</th>
+      <th>Miejscowosc2</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adres.each do |adre| %>
+      <tr>
+        <td><%= adre.ID %></td>
+        <td><%= adre.miejscowosc1 %></td>
+        <td><%= adre.miejscowosc2 %></td>
+        <td><%= link_to 'Show', adre %></td>
+        <td><%= link_to 'Edit', edit_adre_path(adre) %></td>
+        <td><%= link_to 'Destroy', adre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adre', new_adre_path %>

@@ -1,0 +1,33 @@
+<h1>Listing uzytkowniks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Imie</th>
+      <th>Nazwisko</th>
+      <th>Id telefon</th>
+      <th>Id adres</th>
+      <th>Id hobby</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @uzytkowniks.each do |uzytkownik| %>
+      <tr>
+        <td><%= uzytkownik.imie %></td>
+        <td><%= uzytkownik.nazwisko %></td>
+        <td><%= uzytkownik.ID_Telefon %></td>
+        <td><%= uzytkownik.ID_Adres %></td>
+        <td><%= uzytkownik.ID_Hobby %></td>
+        <td><%= link_to 'Show', uzytkownik %></td>
+        <td><%= link_to 'Edit', edit_uzytkownik_path(uzytkownik) %></td>
+        <td><%= link_to 'Destroy', uzytkownik, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Uzytkownik', new_uzytkownik_path %>

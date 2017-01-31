@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ID: 1
+  miejscowosc1: MyString
+  miejscowosc2: MyString
+
+two:
+  ID: 1
+  miejscowosc1: MyString
+  miejscowosc2: MyString

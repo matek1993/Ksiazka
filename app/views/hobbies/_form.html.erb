@@ -1,0 +1,25 @@
+<%= form_for(@hobby) do |f| %>
+  <% if @hobby.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hobby.errors.count, "error") %> prohibited this hobby from being saved:</h2>
+
+      <ul>
+      <% @hobby.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ID %><br>
+    <%= f.number_field :ID %>
+  </div>
+  <div class="field">
+    <%= f.label :nazwa %><br>
+    <%= f.text_field :nazwa %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

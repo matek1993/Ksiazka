@@ -1,0 +1,37 @@
+<%= form_for(@uzytkownik) do |f| %>
+  <% if @uzytkownik.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@uzytkownik.errors.count, "error") %> prohibited this uzytkownik from being saved:</h2>
+
+      <ul>
+      <% @uzytkownik.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :imie %><br>
+    <%= f.text_field :imie %>
+  </div>
+  <div class="field">
+    <%= f.label :nazwisko %><br>
+    <%= f.text_field :nazwisko %>
+  </div>
+  <div class="field">
+    <%= f.label :ID_Telefon %><br>
+    <%= f.number_field :ID_Telefon %>
+  </div>
+  <div class="field">
+    <%= f.label :ID_Adres %><br>
+    <%= f.number_field :ID_Adres %>
+  </div>
+  <div class="field">
+    <%= f.label :ID_Hobby %><br>
+    <%= f.number_field :ID_Hobby %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,1 @@
+json.array! @adres, partial: 'adres/adre', as: :adre
